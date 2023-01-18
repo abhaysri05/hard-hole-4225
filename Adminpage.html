@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="Adminpage.css">
+<body>
+    <h1>Add New Products to Site</h1>
+    <form>
+       <input type="text" placeholder="Name Of Product" required id="name">
+        <br>
+        <label for="">Choose Brand</label><br />
+        <select name="Brand" id="brand">
+            <option value="All">All</option>
+            <option value="MuscleBlaze">MuscleBlaze</option>
+            <option value="MB Fuel">MB Fuel</option>
+            <option value="HealthKart">HealthKart</option>
+            <option value="ON (Optimum Nutrition)">ON (Optimum Nutrition)</option>
+            <option value="GNC">GNC</option>
+        </select>
+        <br />
+        <label for="">Choose Category</label><br />
+        <select name="category" id="category">
+            <option value="All">All</option>
+            <option value="Sports Nutrition">Sports Nutrition</option>
+            <option value="Vitamins & Supplements">Vitamins & Supplements</option>
+            <option value="Ayurveda & Herbs">Ayurveda & Herbs</option>
+            <option value="Health Food & Drinks">Health Food & Drinks</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Wellness">Wellness</option>
+        </select>
+        <br/>
+        <input type="number" placeholder="Price" required id="price"/>
+        <br/>
+        <input type="url" placeholder="image source" required id="img">
+        <br/>
+         <input id="btn" type="submit">
+    </form>
+</body>
+<script src="Adminpage.js"></script>
+</html> 
