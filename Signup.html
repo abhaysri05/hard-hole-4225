@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        background-color: rgb(234, 199, 243);
+        width: 70%;
+        border-radius: 5px;
+        justify-content: center;
+    }
+    #Login{
+        background-color: antiquewhite;
+    }
+    input{
+        width: 90%;
+        height: 40px;
+        border-radius: 5px;
+        border: 0.5px solid grey;
+    }
+    
+    #Login>button{
+        width: 90%;
+        height: 50px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: rgb(196, 190, 190);
+    }
+    select{
+        height: 30px;
+    }
+    
+</style>
+<body>
+    <div id="container">
+        <div>
+            <div>
+                <img src="./image/Health image1.svg" alt="1st">
+                <h3>Wide range of Original & Authentic Nutritional Products</h3>
+                <p>We strive to provide 100% authentic products to our customers</p>
+            </div>
+            <div>
+                <img src="./image/Health image2.svg" alt="2nd">
+                <h3>Get Personalized Diet Plan and Fitness Advice</h3>
+                <p>Start your journey towards a healthy lifestyle</p>
+            </div>
+            <div>
+                <img src="./image/Health image3.svg" alt="3rd">
+                <h3>Great Offer on Top Brands</h3>
+                <p>14 days hassle-free return policy</p>
+            </div>
+        </div>
+        
+        <div id="Login">
+            <p>My Name is <span>*</span></p>
+            <input type="text" placeholder="Your name">
+            <p>I was born on</p>
+            <input type="date" placeholder="Enter DOB">
+            <p>Email</p>
+            <input type="text">
+            <h4>I want to shop for</h4>
+            <p>Section will be customized accordingly</p>
+            <select>
+                <option><span></span>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <br>
+            <button><h3>Proceed</h3></button>
+            
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // let count=0;
+    // setInterval(function(){
+    //     console.log(count)
+    //     count+=1;
+    // },1000);
+    document.getElementById('otp').addEventListener('click',()=>{
+        console.log('hello');
+    })
+</script>

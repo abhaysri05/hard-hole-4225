@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        background-color: rgb(234, 199, 243);
+        width: 70%;
+        border-radius: 5px;
+        justify-content: center;
+    }
+    #Login{
+        background-color: antiquewhite;
+    }
+    #Login>div{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    #Login>div>div>button{
+        width: 60px;
+        height: 45px;
+    }
+    #Login>div>div>input{
+        width: 300px;
+        height: 40px;
+    }
+    #Login>button{
+        width: 400px;
+        height: 50px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: rgb(196, 190, 190);
+    }
+    #tc{
+        color: rgb(96, 54, 237);
+    }
+    #star{
+        color: red;
+    }
+</style>
+<body>
+    <div id="container">
+        <div>
+            <div>
+                <img src="./image/Health image1.svg" alt="1st">
+                <h3>Wide range of Original & Authentic Nutritional Products</h3>
+                <p>We strive to provide 100% authentic products to our customers</p>
+            </div>
+            <div>
+                <img src="./image/Health image2.svg" alt="2nd">
+                <h3>Get Personalized Diet Plan and Fitness Advice</h3>
+                <p>Start your journey towards a healthy lifestyle</p>
+            </div>
+            <div>
+                <img src="./image/Health image3.svg" alt="3rd">
+                <h3>Great Offer on Top Brands</h3>
+                <p>14 days hassle-free return policy</p>
+            </div>
+        </div>
+        
+        <div id="Login">
+            <h1>Login or Sign-up</h1>
+            <div>
+                <div><button>+91</button></div>
+                <div><input type="number" placeholder="Enter your phone number"></div>
+            </div>
+            <button id="otp">Get OTP</button>
+            <p><span id="star">*</span>You may receive SMS updates from Healthkart and can opt out at any time.</p>
+            <p>By logging in you agree to our<span id="tc"> Terms & Conditions</span></p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // let count=0;
+    // setInterval(function(){
+    //     console.log(count)
+    //     count+=1;
+    // },1000);
+    document.getElementById('otp').addEventListener('click',()=>{
+        console.log('hello');
+    })
+</script>
