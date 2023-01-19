@@ -49,8 +49,8 @@
   outline: none;
   padding: 5px;
 }
-.search-div img{
-    cursor: pointer;
+.search-div img {
+  cursor: pointer;
 }
 .login-div {
   width: 8%;
@@ -71,7 +71,7 @@
   margin-left: -10px;
   height: 23px;
   width: 25px;
-  background-color: #77777e;
+  background-color: orange;
   color: aliceblue;
   border-radius: 20px;
   text-align: center;
@@ -127,7 +127,8 @@
 .hover-li {
   display: none;
   position: fixed;
-  top: 173px;
+  /* top: -10px; */
+  margin-top: -24px;
   padding: 50px 20px 20px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
@@ -136,6 +137,7 @@
   -webkit-transition: left 0.2s ease-out, width 0.2s ease-out;
   transition: left 0.2s ease-out, width 0.2s ease-out;
   border-radius: 10px;
+  /* border: 1px solid red; */
 }
 .hover-li li {
   text-align: left;
@@ -163,6 +165,7 @@
 }
 .drop-shop-category {
   left: 5%;
+  /* border: 1px solid red; */
 }
 .drop-shop-category > :nth-child(1) {
   width: 20%;
@@ -191,7 +194,7 @@
 /* slideshow */
 #slide {
   width: 98%;
-  margin: auto;
+  margin: 20px auto;
   display: flex;
 }
 
@@ -212,7 +215,7 @@
   height: 30px;
   width: 30px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   border: 5px solid #77777e;
   left: 5%;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -230,7 +233,7 @@
   height: 30px;
   position: absolute;
   width: 30px;
-  top: 50%;
+  top: 55%;
   right: 3%;
   border: 5px solid #77777e;
   transform: translate(-50%, -50%) rotate(45deg);
@@ -390,7 +393,6 @@
   transform: scale(1.1);
 }
 
-
 /* megasale end */
 
 /* carousel 2 */
@@ -546,6 +548,9 @@
   color: white;
   cursor: pointer;
 }
+#trending img:hover {
+  transform: scale(1.1);
+}
 /* category */
 #category-body {
   width: 80%;
@@ -605,7 +610,7 @@
   font-size: var(--font-14);
   margin-bottom: 5px;
 }
-.box img:hover{
+.box img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -693,6 +698,17 @@
 }
 #socialMedia img:hover {
   transform: scale(1.2);
-  
 }
 /* footer end */
+/* float btn */
+.float {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  background-color: #00b5b7;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}

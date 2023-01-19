@@ -1,7 +1,7 @@
 function firstBlock() {
   document.querySelector(".shop-category").addEventListener("mouseover", () => {
     document.querySelector(".shop-category").style.borderBottom =
-      "5px solid #77777e";
+      "2px solid #77777e";
     let drop = document.querySelector(".drop-shop-category");
     drop.style.display = "flex";
     drop.style.width = "80%";
@@ -11,18 +11,18 @@ function firstBlock() {
   drop.addEventListener("mouseover", function () {
     drop.style.display = "flex";
     document.querySelector(".shop-category").style.borderBottom =
-      "5px solid #77777e";
+      "2px solid #77777e";
     drop.addEventListener("mouseout", function () {
       drop.style.display = "none";
       document.querySelector(".shop-category").style.borderBottom =
-        "5px solid white";
+        "2px solid white";
     });
   });
   document.querySelector(".shop-category").addEventListener("mouseout", () => {
     let drop = document.querySelector(".drop-shop-category");
     drop.style.display = "none";
     document.querySelector(".shop-category").style.borderBottom =
-      "5px solid white";
+      "2px solid white";
   });
 }
 firstBlock();
@@ -33,7 +33,7 @@ function secondBlock() {
     drop.style.width = "40%";
     drop.style.justifyContent = "space-around";
     document.querySelector(".best-seller").style.borderBottom =
-      "5px solid #77777e";
+      "2px solid #77777e";
   });
   let drop = document.querySelector(".drop-best-seller");
   drop.addEventListener("mouseover", function () {
@@ -42,14 +42,14 @@ function secondBlock() {
     drop.addEventListener("mouseout", function () {
       drop.style.display = "none";
       document.querySelector(".best-seller").style.borderBottom =
-        "5px solid white";
+        "2px solid white";
     });
   });
   document.querySelector(".best-seller").addEventListener("mouseout", () => {
     let drop = document.querySelector(".drop-best-seller");
     drop.style.display = "none";
     document.querySelector(".best-seller").style.borderBottom =
-      "5px solid white";
+      "2px solid white";
   });
 }
 secondBlock();
@@ -59,21 +59,21 @@ function thirdBlock() {
     drop.style.display = "flex";
     drop.style.width = "40%";
     drop.style.justifyContent = "space-around";
-    document.querySelector(".brands").style.borderBottom = "5px solid #77777e";
+    document.querySelector(".brands").style.borderBottom = "2px solid #77777e";
   });
   let drop = document.querySelector(".drop-brands");
   drop.addEventListener("mouseover", function () {
     drop.style.display = "flex";
-    document.querySelector(".brands").style.borderBottom = "5px solid #77777e";
+    document.querySelector(".brands").style.borderBottom = "2px solid #77777e";
     drop.addEventListener("mouseout", function () {
       drop.style.display = "none";
-      document.querySelector(".brands").style.borderBottom = "5px solid white";
+      document.querySelector(".brands").style.borderBottom = "2px solid white";
     });
   });
   document.querySelector(".brands").addEventListener("mouseout", () => {
     let drop = document.querySelector(".drop-brands");
     drop.style.display = "none";
-    document.querySelector(".brands").style.borderBottom = "5px solid white";
+    document.querySelector(".brands").style.borderBottom = "2px solid white";
   });
 }
 thirdBlock();
@@ -83,21 +83,21 @@ function fourthBlock() {
     drop.style.display = "flex";
     drop.style.width = "40%";
     drop.style.justifyContent = "space-around";
-    document.querySelector(".deals").style.borderBottom = "5px solid #77777e";
+    document.querySelector(".deals").style.borderBottom = "2px solid #77777e";
   });
   let drop = document.querySelector(".drop-deals");
   drop.addEventListener("mouseover", function () {
     drop.style.display = "flex";
-    document.querySelector(".deals").style.borderBottom = "5px solid #77777e";
+    document.querySelector(".deals").style.borderBottom = "2px solid #77777e";
     drop.addEventListener("mouseout", function () {
       drop.style.display = "none";
-      document.querySelector(".deals").style.borderBottom = "5px solid white";
+      document.querySelector(".deals").style.borderBottom = "2px solid white";
     });
   });
   document.querySelector(".deals").addEventListener("mouseout", () => {
     let drop = document.querySelector(".drop-deals");
     drop.style.display = "none";
-    document.querySelector(".deals").style.borderBottom = "5px solid white";
+    document.querySelector(".deals").style.borderBottom = "2px solid white";
   });
 }
 fourthBlock();
@@ -108,45 +108,26 @@ function fifthBlock() {
     drop.style.width = "20%";
     drop.style.justifyContent = "space-around";
     document.querySelector(".customer").style.borderBottom =
-      "5px solid #77777e";
+      "2px solid #77777e";
   });
   let drop = document.querySelector(".drop-customer");
   drop.addEventListener("mouseover", function () {
     drop.style.display = "flex";
     document.querySelector(".customer").style.borderBottom =
-      "5px solid #77777e";
+      "2px solid #77777e";
     drop.addEventListener("mouseout", function () {
       drop.style.display = "none";
       document.querySelector(".customer").style.borderBottom =
-        "5px solid white";
+        "2px solid white";
     });
   });
   document.querySelector(".customer").addEventListener("mouseout", () => {
     let drop = document.querySelector(".drop-customer");
     drop.style.display = "none";
-    document.querySelector(".customer").style.borderBottom = "5px solid white";
+    document.querySelector(".customer").style.borderBottom = "2px solid white";
   });
 }
 fifthBlock();
-
-// function seventhBlock() {
-//   document.querySelector(".profile").addEventListener("mouseover", () => {
-//     let drop = document.querySelector(".drop-profile");
-//     drop.style.display = "block";
-//   });
-//   let drop = document.querySelector(".drop-profile");
-//   drop.addEventListener("mouseover", function () {
-//     drop.style.display = "block";
-//     drop.addEventListener("mouseout", function () {
-//       drop.style.display = "none";
-//     });
-//   });
-//   document.querySelector(".profile").addEventListener("mouseout", () => {
-//     let drop = document.querySelector(".drop-profile");
-//     drop.style.display = "none";
-//   });
-// }
-// seventhBlock();
 
 //sticky navbar
 window.onscroll = function () {
@@ -222,16 +203,15 @@ function carousel2() {
   setTimeout(carousel2, 4000); // Change image every 4 seconds
 }
 
-
 //global variables
 let mega1 = document.getElementById("product");
 let trending1 = document.getElementById("trending");
-let cartItem = JSON.parse(localStorage.getItem("healthkart_cart"))||[];
+let cartItem = JSON.parse(localStorage.getItem("healthkart_cart")) || [];
 
-window.onload = function(){
+window.onload = function () {
   document.getElementById("cart-quantity").innerText = cartItem.length;
-}
-// 
+};
+//
 
 // fetching products api call
 fetchApi("indexdata.json");
@@ -319,19 +299,18 @@ function createDom(data, tbody) {
 
     let cartBtn = document.createElement("button");
     cartBtn.innerText = "🛒 Add to Cart";
-    cartBtn.setAttribute("class","cart-btn")
-
+    cartBtn.setAttribute("class", "cart-btn");
 
     //cartbtn functionality;
-    cartBtn.addEventListener("click",()=>{
+    cartBtn.addEventListener("click", () => {
       let flag = false;
-      for(let i=0; i<cartItem.length; i++){
-        if(cartItem[i].id == element.id){
+      for (let i = 0; i < cartItem.length; i++) {
+        if (cartItem[i].id == element.id) {
           flag = true;
           break;
         }
       }
-      if(flag==true){
+      if (flag == true) {
         Swal.fire({
           icon: "error",
           title: "Product Already in Wishlist",
@@ -339,8 +318,8 @@ function createDom(data, tbody) {
           width: "50%",
           timer: 1400,
         });
-      }else{
-        cartItem.push({...element,quantity:1});
+      } else {
+        cartItem.push({ ...element, quantity: 1 });
         localStorage.setItem("healthkart_cart", JSON.stringify(cartItem));
         Swal.fire({
           icon: "success",
@@ -351,8 +330,7 @@ function createDom(data, tbody) {
         });
         document.getElementById("cart-quantity").innerText = cartItem.length;
       }
-      
-    })
+    });
 
     imgdiv.append(image);
     ratingdiv.append(ratingbtn, reviewCounter);
