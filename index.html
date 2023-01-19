@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HealthKart</title>
-    <link rel="shortcut icon" href="/home-images/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/home-images/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/index.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!--top navbar -->
     <nav id="navbar1">
       <div class="logo">
         <a href="index.html"
@@ -35,50 +40,58 @@
         <span id="cart-quantity">0</span>
       </div>
     </nav>
+
+    <!-- bottom navbar -->
     <div id="navbar2">
       <div class="categories">
         <ul>
-          <li class="shop-category"style="height: 70px;">
+          <li class="shop-category" style="height: 70px">
             <div><img src="/home-images/menu.png" alt="" /></div>
-            <a href="#">Shop By <br> Category</p></a>
+            <a href="#"
+              >Shop By <br />
+              Category</a
+            >
           </li>
-          <li class="best-seller" style="height: 70px;">
+          <li class="best-seller" style="height: 70px">
             <div>
               <img src="/home-images/bookmark.png" alt="" />
             </div>
             <a href="#">Best Sellers</a>
           </li>
-          <li class="brands" style="height: 70px;">
+          <li class="brands" style="height: 70px">
             <div>
               <img src="/home-images/brand.png" alt="" />
             </div>
             <a href="#">Brands</a>
           </li>
-          <li class="deals" style="height: 70px;">
+          <li class="deals" style="height: 70px">
             <div>
               <img src="/home-images/coupon.png" alt="" />
             </div>
             <a href="#">Deals</a>
           </li>
-          <li class="blogs" style="height: 70px;">
+          <li class="blogs" style="height: 70px">
             <div>
               <img src="/home-images/blog.png" alt="" />
             </div>
             <a href="#">Blogs</a>
           </li>
-          <li class="giftcards" style="height: 70px;">
+          <li class="giftcards" style="height: 70px">
             <div>
               <img src="/home-images/gift-card.png" alt="" />
             </div>
             <a href="#">Gift Cards</a>
           </li>
-          <li class="customer" style="height: 70px;">
+          <li class="customer" style="height: 70px">
             <div>
               <img src="/home-images/customer-support.png" alt="" />
             </div>
-            <a href="#">Customer <br> Support</a>
+            <a href="#"
+              >Customer <br />
+              Support</a
+            >
           </li>
-          <li class="store" style="height: 70px;">
+          <li class="store" style="height: 70px">
             <div>
               <img src="/home-images/location.png" alt="" />
             </div>
@@ -266,9 +279,9 @@
       </div>
     </div>
     <div class="drop-deals hover-li">
-      <div><img src="/home-images/sale3.webp" alt=""></div>
-      <div><img src="/home-images/flash-sale.webp" alt=""></div>
-      <div><img src="/home-images/clearance-sale.webp" alt=""></div>
+      <div><img src="/home-images/sale3.webp" alt="" /></div>
+      <div><img src="/home-images/flash-sale.webp" alt="" /></div>
+      <div><img src="/home-images/clearance-sale.webp" alt="" /></div>
     </div>
     <div class="drop-customer hover-li">
       <ul>
@@ -281,27 +294,156 @@
       </ul>
     </div>
 
+    <!-- carousel container -->
+    <div id="slide">
+      <button id="left" onclick="plusDivs(-1)"></button>
+      <button id="right" onclick="plusDivs(+1)"></button>
+      <div class="mySlides fade">
+        <img src="/home-images/carousel1.webp" alt="" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/home-images/carousel2.webp" alt="" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/home-images/carousel3.webp" alt="" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/home-images/carousel4.webp" alt="" />
+      </div>
+      <div class="mySlides fade">
+        <img src="/home-images/carousel5.webp" alt="" />
+      </div>
+    </div>
 
-<!-- carousel container -->
-<div id="slide">
-  <button id="left" onclick="plusDivs(-1)"></button>
-  <button id="right" onclick="plusDivs(+1)"></button>
-  <div class="mySlides"><img src="/home-images/carousel1.webp" alt=""></div>
-  <div class="mySlides"><img src="/home-images/carousel2.webp" alt=""></div>
-  <div class="mySlides"><img src="/home-images/carousel3.webp" alt=""></div>
-  <div class="mySlides"><img src="/home-images/carousel4.webp" alt=""></div>
-  <div class="mySlides"><img src="/home-images/carousel5.webp" alt=""></div>
-</div>
+    <!--  Mega Price Drop-->
+    <div id="mega-price">
+      <div>
+        <h2>Mega Price Drop</h2>
+        <p>View All</p>
+      </div>
+      <div id="product"></div>
+    </div>
 
-<!--  Mega Price Drop-->
-<div id="mega-price">
-  <div>
-    <h2>Mega Price Drop</h2>
-    <p>View All</p>
-  </div>
-  <div id="product"></div>
-</div>
+    <!-- carousel 2 -->
+    <div id="slide2">
+      <div class="mySlides2 fade">
+        <img src="/home-images/slide1.webp" alt="" />
+      </div>
+      <div class="mySlides2 fade">
+        <img src="/home-images/slide2.webp" alt="" />
+      </div>
+      <div class="mySlides2 fade">
+        <img src="/home-images/slide3.webp" alt="" />
+      </div>
+    </div>
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
+    <!-- trending Items -->
+    <div id="trending-page">
+      <div>
+        <h2>Trending Section</h2>
+        <p>View All</p>
+      </div>
+      <div id="trending"></div>
+    </div>
+
+    <!-- category -->
+    <div id="category-body">
+      <h2>What are you looking for, User?</h2>
+      <div>
+        <img src="https://img2.hkrtcdn.com/13437/normal_1343641_o.png" alt="" />
+        <img src="https://img8.hkrtcdn.com/13471/normal_1347067_o.png" alt="" />
+        <img src="https://img8.hkrtcdn.com/13530/bnr_1352997_o.png" alt="" />
+        <img src="https://img6.hkrtcdn.com/15625/bnr_1562425_o.png" alt="" />
+        <img src="https://img4.hkrtcdn.com/13471/normal_1347073_o.png" alt="" />
+        <img src="https://img6.hkrtcdn.com/13471/normal_1347075_o.png" alt="" />
+        <img src="https://img4.hkrtcdn.com/13465/normal_1346413_o.png" alt="" />
+        <img
+          src="https://img10.hkrtcdn.com/13471/normal_1347079_o.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- freebie part -->
+    <div id="freebie-body">
+      <h2>Freebies Zone</h2>
+      <div>
+        <img src="/home-images/freebie1.webp" alt="" /><img
+          src="/home-images/freebie2.webp"
+          alt=""
+        /><img src="/home-images/freebie3.webp" alt="" /><img
+          src="/home-images/freebie4.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!-- bottom body -->
+    <div>
+      <div id="bottom-body">
+        <div class="box">
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/hk-cash-icon.svg"
+            alt=""
+          />
+          <h3>Earn HK Cash</h3>
+          <p>
+            Shop with us and get HK Cash to redeem on your next purchase. Know
+            more about HK Cash
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/safe-payment-icon.svg"
+            alt=""
+          />
+          <h3>Safe Payments</h3>
+          <p>Pay with the world’s most popular and secure payment methods.</p>
+        </div>
+        <div class="box">
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/authenticity-icon.svg"
+            alt=""
+          />
+          <h3>Authenticity Guaranteed</h3>
+          <p>100% authentic products for our customers</p>
+        </div>
+        <div class="box">
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/andriod-icon.svg"
+            alt=""
+          />
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/apple-icon.svg"
+            alt=""
+          />
+          <h3>Download Healthkart App</h3>
+          <p>Get the best experience of Healthkart at your fingertips.</p>
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/playstore-icon.svg"
+            alt=""
+          />
+          <img
+            src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/appstore-icon.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="main"></div>
   </body>
   <script src="/index.js"></script>
+  <script type="module">
+    import { footer } from "./components/footer.js";
+    let main = document.getElementById("main");
+    main.innerHTML = footer();
+  </script>
 </html>

@@ -1,1 +1,0 @@
-GET https://healthkart-render-api.onrender.com/allproducts/flashsale
