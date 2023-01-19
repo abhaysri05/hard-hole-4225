@@ -222,8 +222,16 @@ function carousel2() {
   setTimeout(carousel2, 4000); // Change image every 4 seconds
 }
 
+
+//global variables
 let mega1 = document.getElementById("product");
 let trending1 = document.getElementById("trending");
+let cartItem = JSON.parse(localStorage.getItem("healthkart_cart"))||[];
+
+window.onload = function(){
+  document.getElementById("cart-quantity").innerText = cartItem.length;
+}
+// 
 
 // fetching products api call
 fetchApi("indexdata.json");
@@ -311,6 +319,40 @@ function createDom(data, tbody) {
 
     let cartBtn = document.createElement("button");
     cartBtn.innerText = "🛒 Add to Cart";
+    cartBtn.setAttribute("class","cart-btn")
+
+
+    //cartbtn functionality;
+    cartBtn.addEventListener("click",()=>{
+      let flag = false;
+      for(let i=0; i<cartItem.length; i++){
+        if(cartItem[i].id == element.id){
+          flag = true;
+          break;
+        }
+      }
+      if(flag==true){
+        Swal.fire({
+          icon: "error",
+          title: "Product Already in Wishlist",
+          showConfirmButton: false,
+          width: "50%",
+          timer: 1400,
+        });
+      }else{
+        cartItem.push({...element,quantity:1});
+        localStorage.setItem("healthkart_cart", JSON.stringify(cartItem));
+        Swal.fire({
+          icon: "success",
+          title: "Product Added in Wishlist",
+          showConfirmButton: false,
+          width: "50%",
+          timer: 1400,
+        });
+        document.getElementById("cart-quantity").innerText = cartItem.length;
+      }
+      
+    })
 
     imgdiv.append(image);
     ratingdiv.append(ratingbtn, reviewCounter);

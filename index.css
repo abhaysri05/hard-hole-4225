@@ -49,6 +49,9 @@
   outline: none;
   padding: 5px;
 }
+.search-div img{
+    cursor: pointer;
+}
 .login-div {
   width: 8%;
 }
@@ -372,14 +375,23 @@
   cursor: pointer;
   border-radius: 2px;
 }
-#product > div > :nth-child(6) button:hover {
+
+/* hover effect */
+#product > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#product > div:hover .cart-btn {
   background-color: orange;
   color: white;
   cursor: pointer;
 }
+#product img:hover {
+  transform: scale(1.1);
+}
+
+
 /* megasale end */
-
-
 
 /* carousel 2 */
 #slide2 {
@@ -418,8 +430,6 @@
 }
 /* carousel2 end */
 
-
-
 /* trending section */
 #trending-page {
   margin: 20px 10px;
@@ -448,16 +458,13 @@
   gap: 15px;
   row-gap: 25px;
 }
-#trending > div img {
+#trending > div {
   width: 95%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 5px;
   padding: 5px;
-}
-#trending > div img:hover {
-  width: 100%;
 }
 #trending > div > :nth-child(1) {
   width: 80%;
@@ -528,12 +535,17 @@
   cursor: pointer;
   border-radius: 2px;
 }
-#trending > div > :nth-child(6) button:hover {
+
+/* hover effect on card */
+#trending > div:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+#trending > div:hover .cart-btn {
   background-color: orange;
   color: white;
   cursor: pointer;
 }
-
 /* category */
 #category-body {
   width: 80%;
@@ -593,8 +605,9 @@
   font-size: var(--font-14);
   margin-bottom: 5px;
 }
-.box img {
+.box img:hover{
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* footer css */
@@ -677,5 +690,9 @@
 }
 #socialMedia img {
   width: 100%;
+}
+#socialMedia img:hover {
+  transform: scale(1.2);
+  
 }
 /* footer end */

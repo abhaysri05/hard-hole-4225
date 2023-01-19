@@ -29,7 +29,7 @@
         <img src="/home-images/search-bar.svg" alt="" />
         <input
           type="text"
-          placeholder="Search for products, brands or Health Goals"
+          placeholder="Search for products, brands or Health Goals" id="search-input"
         />
       </div>
       <div class="login-div">
@@ -425,14 +425,14 @@
           />
           <h3>Download Healthkart App</h3>
           <p>Get the best experience of Healthkart at your fingertips.</p>
-          <img
+          <a style="margin-right: 15px;" href="https://play.google.com/store/apps/details?id=com.healthkart.healthkart&hl=en_IN&gl=US"><img
             src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/playstore-icon.svg"
             alt=""
-          />
-          <img
+          /></a>
+          <a href="https://apps.apple.com/in/app/healthkart/id995933852"><img
             src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/appstore-icon.svg"
             alt=""
-          />
+          /></a>
         </div>
       </div>
     </div>
@@ -440,6 +440,7 @@
     <!-- footer -->
     <div id="main"></div>
   </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="/index.js"></script>
   <script type="module">
     import { footer } from "./components/footer.js";
