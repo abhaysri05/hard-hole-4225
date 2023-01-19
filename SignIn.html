@@ -16,6 +16,7 @@
     }
     #Login{
         background-color: antiquewhite;
+        padding-left: 50px;
     }
     #Login>div{
         display: flex;
@@ -42,6 +43,15 @@
     #star{
         color: red;
     }
+    a{
+        color: blue;
+        text-decoration: none;
+    }
+    #otp:hover{
+        color: crimson;
+        background-color: rgb(65, 218, 218);
+        font-size: 15px;
+    }
 </style>
 <body>
     <div id="container">
@@ -67,22 +77,42 @@
             <h1>Login or Sign-up</h1>
             <div>
                 <div><button>+91</button></div>
-                <div><input type="number" placeholder="Enter your phone number"></div>
+                <div><input id="num" type="number" placeholder="Enter your phone number" ></div>
             </div>
-            <button id="otp">Get OTP</button>
+            <button id="otp"><h3>Get OTP</h3></button>
             <p><span id="star">*</span>You may receive SMS updates from Healthkart and can opt out at any time.</p>
-            <p>By logging in you agree to our<span id="tc"> Terms & Conditions</span></p>
+            <p>By logging in you agree to our<span id="tc"><a href="https://www.healthkart.com/hk/TermsConditions.action">  Terms & Conditions</a> </span></p>
         </div>
     </div>
 </body>
 </html>
 <script>
-    // let count=0;
-    // setInterval(function(){
-    //     console.log(count)
-    //     count+=1;
-    // },1000);
+    let mob_details=JSON.parse(localStorage.getItem('mob')) ||[];
     document.getElementById('otp').addEventListener('click',()=>{
-        console.log('hello');
+        let x=document.getElementById('otp');
+        x.style.backgroundColor='grey';
+        setTimeout((el)=>{
+            x.style.backgroundColor='rgb(196, 190, 190)'
+        },2000)
+        
+        let mob_num=document.getElementById('num').value;
+        let 
+        if(mob_num.length==10){
+            mob_details.push(mob_num);
+            localStorage.setItem('mob',JSON.stringify(mob_details));
+            console.log(mob_details);
+            let digits='0123456789';
+            let OTP = '';
+            for (let i = 0; i < 4; i++ ) {
+            OTP += digits[Math.floor(Math.random() * 10)];
+        }
+        console.log(OTP);
+        localStorage.setItem('num-otp',OTP);
+            
+        }
+        else{
+            alert('Please fill Correct Mobile Number')
+        }
     })
+    
 </script>
