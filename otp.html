@@ -67,12 +67,37 @@
                 <p>Get code <span><h4>VIA CALL</h4></span></p>
                 <h3 id="resend-otp">RESEND OTP</h3>
             </div>
-            <button><h3>Continue</h3></button>
+            <button id="otp-submit"><h3>Continue</h3></button>
         </div>
     </div>
 </body>
 </html>
 <script>
+    let otp_data=localStorage.getItem('num-otp');
+    let mob_details=JSON.parse(localStorage.getItem('mob')) ||[];
+    document.getElementById('enter-mob').textContent="+91" + mob_details[mob_details.length-1];
+    let otpBtn=document.getElementById('otp-submit')
+    otpBtn.addEventListener('click',()=>{
+        otpBtn.style.backgroundColor='grey';
+        setTimeout((el)=>{
+            otpBtn.style.backgroundColor='rgb(196, 190, 190)'
+        },2000)
+        let temp_otp=document.querySelector('#otp-ver').value;
+        if(temp_otp==otp_data){
+            alert('OTP Sucessful');
+            for(let i=0;i<mob_details.length-1;i++){
+                if(mob_details[mob_details.length-1]!=mob_details[i]){
+                    window.location.href='Signup.html';
+                }
+                else{
+                    window.location.href='SignIn.html';
+                }
+            }
+        }
+        else{
+            alert('Invalid OTP')
+        }
+    })
     let count=30;
     setInterval(function(){
         console.log(count)
@@ -84,18 +109,27 @@
             document.getElementById('timer').textContent="00:00";
         }
     },1000);
-    // document.getElementById('resend-otp').addEventListener('click',()=>{
-    //     count=30;
-    //     console.log('hii');
-    //     setInterval(function(){
-    //     console.log(count)
-    //     count-=1;
-    //     if(count>0){
-    //         document.getElementById('timer').textContent=count;
-    //     }
-    //     else{
-    //         document.getElementById('timer').textContent="00:00";
-    //     }
-    // },1000);
-    // })
+
+    let temp_count=30;
+    document.getElementById('resend-otp').addEventListener('click',()=>{
+        count="";
+        document.getElementById('timer').textContent=count;
+        // let OTP = '';
+        // for (let i = 0; i < 4; i++ ) {
+        //     OTP += digits[Math.floor(Math.random() * 10)];
+        // }
+        // localStorage.setItem('num-otp',OTP);
+        // alert(OTP);
+        
+        setInterval(function(){
+        console.log(temp_count)
+        temp_count-=1;
+        if(temp_count>0){
+            document.getElementById('timer').textContent=temp_count;
+        }
+        else{
+            document.getElementById('timer').textContent="00:00";
+        }
+        },1000);
+    });
 </script>

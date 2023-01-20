@@ -69,20 +69,20 @@
         
         <div id="Login">
             <p>My Name is <span>*</span></p>
-            <input type="text" placeholder="Your name">
+            <input id="name" type="text" placeholder="Your name">
             <p>I was born on</p>
-            <input type="date" placeholder="Enter DOB">
+            <input id="date" type="date" placeholder="Enter DOB">
             <p>Email</p>
-            <input type="text" placeholder="Enter email">
+            <input id="email" type="text" placeholder="Enter email">
             <h4>I want to shop for</h4>
             <p>Section will be customized accordingly</p>
-            <select>
+            <select id="gender">
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
             </select>
             <br>
-            <button><h3>Proceed</h3></button>
+            <button id="sub-home"><h3>Proceed</h3></button>
             
 
         </div>
@@ -95,7 +95,15 @@
     //     console.log(count)
     //     count+=1;
     // },1000);
-    document.getElementById('otp').addEventListener('click',()=>{
-        console.log('hello');
+    let Data_user=JSON.parse(localStorage.getItem('emp'))||[];
+    document.getElementById('sub-home').addEventListener('click',()=>{
+        let obj={
+            name:document.getElementById('name').value,
+            date:document.getElementById('date').value,
+            email:document.getElementById('email').value,
+            gender:document.getElementById('gender').value
+        }
+        Data_user.push(obj);
+        localStorage.setItem('emp',JSON.stringify(Data_user));
     })
 </script>

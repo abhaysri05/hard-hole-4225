@@ -96,7 +96,7 @@
         },2000)
         
         let mob_num=document.getElementById('num').value;
-        let 
+        
         if(mob_num.length==10){
             mob_details.push(mob_num);
             localStorage.setItem('mob',JSON.stringify(mob_details));
@@ -106,8 +106,10 @@
             for (let i = 0; i < 4; i++ ) {
             OTP += digits[Math.floor(Math.random() * 10)];
         }
-        console.log(OTP);
+        window.location.href='otp.html';
         localStorage.setItem('num-otp',OTP);
+        alert(OTP);
+        //console.log(OTP);
             
         }
         else{
