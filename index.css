@@ -64,6 +64,7 @@
   border-radius: 5px;
   font-size: var(--font-14);
   font-weight: 500;
+  cursor: pointer;
 }
 #cart-quantity {
   /* top: -50px; */
