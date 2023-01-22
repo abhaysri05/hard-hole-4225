@@ -1,4 +1,5 @@
 let cart_data = JSON.parse(localStorage.getItem("healthkart_cart"));
+console.log(cart_data)
         var total = 0;
 // let data_div = document.querySelector("#cart_data");
  function applyCoup(){
@@ -40,9 +41,9 @@ function Cart_items() {
                 let div = document.createElement("div");
                 let divtxt = document.createElement("span");
                 let m_name = document.createElement('b');
-                m_name.innerText = product.name;
+                m_name.innerText = product.product_name;
                 let m_price1 = document.createElement('p');
-                m_price1.innerText = '₹ ' + product.price;
+                m_price1.innerText = '₹ ' + product.sell_price;
                 let m_quantity = document.createElement('div');
                 m_quantity.style.display = 'flex'
                 m_quantity.style.alignItems = 'center'
@@ -77,7 +78,8 @@ function Cart_items() {
                 } 
                 div.style.textAlign = 'center'
                 let imgProduct = document.createElement('img');
-                imgProduct.src = product.imgProduct;
+                imgProduct.src = product.image;
+                imgProduct.style.width = "100%"
                 divtxt.append(m_name, m_price1,m_quantity)
                 div.append(imgProduct, divtxt);
                 datadiv.append(div);

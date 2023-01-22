@@ -8,8 +8,8 @@ form.addEventListener("submit",async function(e){
                 category:form.category.value,
                 price:form.price.value,
                 rating:form.rating.value,
-                review:form.review.value,
-                img:form.img.value,
+                reviews:form.review.value,
+                image:form.img.value,
             };
              
             try{
@@ -22,6 +22,8 @@ form.addEventListener("submit",async function(e){
                 })
                 let data=await res.json();
                 console.log(data)
+                alert ("item has been added to product page")
+                window.location.assign("./productpage/productpage.html")
             }
             catch(error){
                 console.log(JSON.stringify(error))

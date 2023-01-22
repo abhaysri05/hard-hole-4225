@@ -34,3 +34,11 @@ label{
     font-size:20px;
     border-radius: 25px;
  }
+ #navbar1 {
+    border-bottom: 1px solid #d3cfcf;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+  }
