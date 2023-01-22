@@ -1,0 +1,36 @@
+body{
+    width: 90%;
+    margin: auto;
+    background-color: rgb(240, 245, 247);
+}
+form{
+   margin-left: 32%;
+   font-size: 15px ;
+   color: rgb(214, 117, 117);
+    font-weight: bolder;
+}
+h1{
+    font-size: 55px;
+    text-align: center;
+    color: green;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+input{
+    padding: 8px;
+    margin: 5px;
+}
+select{
+    padding: 8px;
+    margin: 5px;
+}
+label{
+    font-size: 20px;
+    color: green;
+}
+#btn{
+    padding: 10px 200px 10px 200px;
+    background-color: rgb(103, 246, 182);
+    border: none;
+    font-size:20px;
+    border-radius: 25px;
+ }
