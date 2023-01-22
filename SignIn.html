@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    /* nav */
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap");
+* {
+  font-family: "Montserrat";
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --font-8: 8px;
+  --font-10: 10px;
+  --font-12: 12px;
+  --font-14: 14px;
+  --font-16: 16px;
+  --font-18: 18px;
+  --font-20: 20px;
+  --font-22: 22px;
+  --font-24: 24px;
+  --font-26: 26px;
+  --font-28: 28px;
+}
+
+#navbar1 {
+  border-bottom: 1px solid #d3cfcf;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+}
+.search-div {
+  border: 1px solid #77777e;
+  border-radius: 4px;
+  display: flex;
+  width: 30%;
+  background-color: #f7f7f7;
+  align-items: center;
+  padding: 8px 8px 5px 5px;
+  justify-content: space-betweens;
+}
+.search-div input {
+  width: 100%;
+  border: none;
+  background-color: #f7f7f7;
+  font-size: var(--font-14);
+  letter-spacing: 0.45px;
+  line-height: 19px;
+  margin: 0;
+  cursor: text;
+  outline: none;
+  padding: 5px;
+}
+.search-div img {
+  cursor: pointer;
+}
+.login-div {
+  width: 8%;
+}
+#login-btn {
+  background-color: #00b5b7;
+  height: 45px;
+  color: aliceblue;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  font-size: var(--font-14);
+  font-weight: 500;
+}
+#cart-quantity {
+  /* top: -50px; */
+  display: inline-block;
+  margin-left: -10px;
+  height: 23px;
+  width: 25px;
+  background-color: orange;
+  color: aliceblue;
+  border-radius: 20px;
+  text-align: center;
+  /* padding: 2px; */
+}
+
+    #container{
+        display: flex;
+        background-color: rgb(234, 199, 243);
+        width: 70%;
+        border-radius: 5px;
+        justify-content: center;
+    }
+    #Login{
+        background-color: antiquewhite;
+        padding-left: 50px;
+    }
+    #Login>div{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    #Login>div>div>button{
+        width: 60px;
+        height: 45px;
+    }
+    #Login>div>div>input{
+        width: 300px;
+        height: 40px;
+    }
+    #Login>button{
+        width: 400px;
+        height: 50px;
+        border-radius: 5px;
+        border: 0px;
+        background-color: rgb(196, 190, 190);
+    }
+    #tc{
+        color: rgb(96, 54, 237);
+    }
+    #star{
+        color: red;
+    }
+    a{
+        color: blue;
+        text-decoration: none;
+    }
+    #otp:hover{
+        color: crimson;
+        background-color: rgb(65, 218, 218);
+        font-size: 15px;
+    }
+    #container>div>div{
+        margin-top: 20px;
+    }
+    #container>div>div>img{
+        height: 230px;
+        width: 90%;
+    }
+</style>
+<body>
+    <nav id="navbar1">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="/home-images/logo.png" alt="" width="250" height="80"
+          /></a>
+        </div>
+        <div class="search-div">
+          <img src="/home-images/search-bar.svg" alt="" />
+          <input
+            type="text"
+            placeholder="Search for products, brands..."
+            id="search-input"
+          />
+        </div>
+        <div class="login-div">
+          <button id="login-btn">Login</button>
+        </div>
+        <div class="cart">
+          <img src="/home-images/cart-img.svg" alt="cart" height="25px" />
+          <span id="cart-quantity">0</span>
+        </div>
+      </nav>
+
+      
+    <div id="container">
+        <div>
+            <div>
+                <img src="./image/Health image1.svg" alt="1st">
+                <h3>Wide range of Original & Authentic Nutritional Products</h3>
+                <p>We strive to provide 100% authentic products to our customers</p>
+            </div>
+            <div>
+                <img src="./image/Health image2.svg" alt="2nd">
+                <h3>Get Personalized Diet Plan and Fitness Advice</h3>
+                <p>Start your journey towards a healthy lifestyle</p>
+            </div>
+            <!-- <div>
+                <img src="./image/Health image3.svg" alt="3rd">
+                <h3>Great Offer on Top Brands</h3>
+                <p>14 days hassle-free return policy</p>
+            </div> -->
+        </div>
+        
+        <div id="Login">
+            <h1>Login or Sign-up</h1>
+            <div>
+                <div><button>+91</button></div>
+                <div><input id="num" type="number" placeholder="Enter your phone number" ></div>
+            </div>
+            <button id="otp"><h3>Get OTP</h3></button>
+            <p><span id="star">*</span>You may receive SMS updates from Healthkart and can opt out at any time.</p>
+            <p>By logging in you agree to our<span id="tc"><a href="https://www.healthkart.com/hk/TermsConditions.action">  Terms & Conditions</a> </span></p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let mob_details=JSON.parse(localStorage.getItem('mob')) ||[];
+    document.getElementById('otp').addEventListener('click',()=>{
+        let x=document.getElementById('otp');
+        x.style.backgroundColor='grey';
+        setTimeout((el)=>{
+            x.style.backgroundColor='rgb(196, 190, 190)'
+        },2000)
+        
+        let mob_num=document.getElementById('num').value;
+        
+        if(mob_num.length==10){
+            mob_details.push(mob_num);
+            localStorage.setItem('mob',JSON.stringify(mob_details));
+            console.log(mob_details);
+            let digits='0123456789';
+            let OTP = '';
+            for (let i = 0; i < 4; i++ ) {
+            OTP += digits[Math.floor(Math.random() * 10)];
+        }
+        window.location.href='otp.html';
+        localStorage.setItem('num-otp',OTP);
+        alert(OTP);
+        //console.log(OTP);
+            
+        }
+        else{
+            alert('Please fill Correct Mobile Number')
+        }
+    })
+    
+</script>

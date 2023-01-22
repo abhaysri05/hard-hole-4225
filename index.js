@@ -1,3 +1,8 @@
+document.getElementById('login-btn').addEventListener('click',()=>{
+  window.location.href='SignIn.html';
+})
+
+
 function firstBlock() {
   document.querySelector(".shop-category").addEventListener("mouseover", () => {
     document.querySelector(".shop-category").style.borderBottom =
