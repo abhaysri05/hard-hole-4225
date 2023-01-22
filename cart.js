@@ -56,14 +56,14 @@ function Cart_items() {
                 buttonMinus.setAttribute('class','quantity_btn')
                 buttonPlus.setAttribute('class','quantity_btn')
                 quan.textContent = 'Quantity '+ product.quantity;
-                total += product.price*product.quantity;
+                total += product.sell_price*product.quantity;
                 m_quantity.append(quan,buttonMinus,buttonPlus)
                 buttonPlus.onclick = ()=>{
                     
                      product.quantity++;
                      quan.textContent = 'Quantity '+ product.quantity;
                      localStorage.setItem('healthkart_cart',JSON.stringify(cart_data))
-                     total += product.price;
+                     total += product.sell_price;
                      totalAmount.textContent= `Final Payable ₹ ${total} `;
                      proceedToPay.innerHTML = `Proceed to Pay ₹ ${total} `;
                 }
@@ -72,7 +72,7 @@ function Cart_items() {
                     product.quantity--;
                      quan.textContent = 'Quantity '+ product.quantity;
                      localStorage.setItem('healthkart_cart',JSON.stringify(cart_data))
-                     total =  total -product.price;
+                     total =  total -product.sell_price;
                      totalAmount.textContent= `Final Payable ₹ ${total}`;
                      refresh()
                 } 
@@ -100,7 +100,7 @@ function Cart_items() {
                         localStorage.setItem('discount_health',false)
                      }
         totalAmount.textContent = `Final Payable ₹ ${total} `;
-        
+    
         cartItem.innerHTML = `My Cart`
         pincode.innerHTML = 'Pincode'
         coupon.innerHTML = 'Apply Code'
@@ -137,4 +137,12 @@ function decreaseQuan(product){
 }
 function refresh(){
     window.location.href = 'cart.html'
+}
+function displayProduct(cart_data){
+    
+    var a=data.reduce((acc,curr)=>{
+        acc+=curr.m_price
+        return acc
+    },0)
+    totalAmount.textContent=a
 }
