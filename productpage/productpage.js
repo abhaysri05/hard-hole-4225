@@ -178,7 +178,7 @@ function getcard(id,name,rating,imageurl,reviews,price,reviews){
    
     <div class="card-item card-description">${price}</div>
     <div class="button">
-    <button  class="add_to_cart">
+    <button onclick="add()" class="add_to_cart">
     <i class="fas fa-cart-plus"></i> Add to Cart
 </button>
 
@@ -188,3 +188,35 @@ function getcard(id,name,rating,imageurl,reviews,price,reviews){
     
     return card
 }
+
+let btns=document.querySelector("#caretake_data")
+
+function add(){
+  let btn=JSON.parse(localStorage.getItem("cartdata"))||[]
+  // let btn=JSON.parse(localStorage.getItem("cartdata"))||[]
+  // localStorage.setItem("cartdata",JSON.stringify(item))
+Alldata.forEach((el)=>{
+  localStorage.setItem("cartdata",JSON.stringify(el))
+})
+ 
+  
+    // btn.push(index)
+    
+
+ 
+  // const name = card.querySelector('.card-title').innerText;
+  // const rating = card.querySelector('.card-rating').innerText;
+  // const imageurl = card.querySelector('image').getAttribute('src');
+  // const reviews = card.querySelector('.card-reviews').innerText;
+  // const price = card.querySelector('.card-description').innerText;
+  // // Create an object with the data
+  // const item = { id, name, rating, imageurl, reviews, price };
+  // console.log(item)
+  
+ 
+}
+
+
+ 
+
+
