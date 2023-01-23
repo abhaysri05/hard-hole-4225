@@ -11,3 +11,5 @@ fw21_1080 - mohit kumar
 fp07_251 - Siddharth Kumar
 
 netlify link --https://cerulean-youtiao-3cbdaf.netlify.app/index.html
+
+""We are all of responsible to built clone helthkart website.""
